@@ -74,10 +74,8 @@
   </head>
 
   <body class="page">
-    <main class="page__content" id="root"></main>
-
-    <template id="template-newsletter-card">
-      <article class="card card--newsletter">
+    <main class="page__content" id="root">
+      <article class="card card--newsletter" id="newsletter-card">
         <picture class="card__picture" data-id="picture">
           <source
             srcset="/illustration-sign-up-desktop.svg"
@@ -128,10 +126,8 @@
           </form>
         </div>
       </article>
-    </template>
 
-    <template id="template-confirmation-card">
-      <article class="card card--confirmation">
+      <article class="card card--confirmation" id="confirmation-card">
         <div>
           <img class="card__icon" src="/icon-success.svg" alt="" />
           <h2 class="card__title text text--heading-md">
@@ -147,7 +143,7 @@
           Dismiss message
         </button>
       </article>
-    </template>
+    </main>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

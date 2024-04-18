@@ -76,7 +76,8 @@ export default class App {
   }
 
   public init() {
-    this.rootElement.replaceChildren(this.newsletterCard.rootElement);
+    this.confirmationCard.rootElement.dataset.visible = "false";
+    this.newsletterCard.rootElement.dataset.visible = "true";
     this.newsletterCard.buttonElement.addEventListener(
       "click",
       this.onNewsletterCardButtonClick,
@@ -85,11 +86,10 @@ export default class App {
   }
 
   private async onNewsletterCardButtonClick() {
-    console.log(this.newsletterCard.formElement.checkValidity());
-
     const keyframeGenerator = fadeAndSlideXKeyframes(TO_LEFT);
     await this.playAnimation(keyframeGenerator.next().value);
-    this.rootElement.replaceChildren(this.confirmationCard.rootElement);
+    this.newsletterCard.rootElement.dataset.visible = "false";
+    this.confirmationCard.rootElement.dataset.visible = "true";
     await this.playAnimation(keyframeGenerator.next().value);
     this.confirmationCard.buttonElement.addEventListener(
       "click",
@@ -101,7 +101,8 @@ export default class App {
   private async onConfirmationCardButtonClick() {
     const keyframeGenerator = fadeAndSlideXKeyframes(TO_RIGHT);
     await this.playAnimation(keyframeGenerator.next().value);
-    this.rootElement.replaceChildren(this.newsletterCard.rootElement);
+    this.confirmationCard.rootElement.dataset.visible = "false";
+    this.newsletterCard.rootElement.dataset.visible = "true";
     await this.playAnimation(keyframeGenerator.next().value);
     this.newsletterCard.buttonElement.addEventListener(
       "click",

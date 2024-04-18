@@ -1,4 +1,5 @@
 .card {
+  display: block;
   width: 100%;
   min-height: 100vh;
   background: var(--color-white);
@@ -41,6 +42,19 @@
 .card--confirmation .card__subtitle {
   margin-bottom: 1.5rem;
   color: var(--color-dark-navy);
+}
+
+.card--newsletter[data-visible="true"] {
+  display: block;
+}
+
+.card--confirmation[data-visible="true"] {
+  display: flex;
+}
+
+.card--newsletter[data-visible="false"],
+.card--confirmation[data-visible="false"] {
+  display: none;
 }
 
 @media screen and (min-width: 40rem) {
@@ -88,5 +102,9 @@
     order: 2;
     width: 25rem;
     border-radius: 0;
+  }
+
+  .card--newsletter[data-visible="true"] {
+    display: flex;
   }
 }

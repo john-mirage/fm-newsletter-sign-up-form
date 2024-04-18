@@ -1,13 +1,13 @@
 import Card from "./card";
 
-const TEMPLATE_ID = "template-newsletter-card";
+const ID = "newsletter-card";
 
 export default class NewsletterCard extends Card {
   public formElement: HTMLFormElement;
   public pictureElement: HTMLPictureElement;
 
   public constructor() {
-    super(TEMPLATE_ID);
+    super(ID);
     this.formElement = this.getFormElement();
     this.pictureElement = this.getPictureElement();
   }
