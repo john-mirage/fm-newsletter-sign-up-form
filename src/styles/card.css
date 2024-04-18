@@ -1,0 +1,92 @@
+.card {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-white);
+}
+
+.card--newsletter .card__picture,
+.card--newsletter .card__picture-image {
+  width: 100%;
+}
+
+.card--newsletter .card__content {
+  padding: 2.5rem 1.5rem;
+}
+
+.card--newsletter .card__title,
+.card--newsletter .card__subtitle {
+  margin-bottom: 1.5rem;
+  color: var(--color-dark-navy);
+}
+
+.card--newsletter .card__list {
+  margin-bottom: 2.5rem;
+}
+
+.card--confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 9.31rem 1.5rem 2.5rem 1.5rem;
+}
+
+.card--confirmation .card__icon {
+  margin-bottom: 2.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.card--confirmation .card__title,
+.card--confirmation .card__subtitle {
+  margin-bottom: 1.5rem;
+  color: var(--color-dark-navy);
+}
+
+@media screen and (min-width: 40rem) {
+  .card {
+    overflow: hidden;
+    max-width: 31.5rem;
+    min-height: auto;
+    border-radius: 2.25rem;
+    box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .card--newsletter .card__content {
+    padding: 4rem;
+  }
+
+  .card--newsletter .card__picture {
+    border-bottom-left-radius: 2.25rem;
+    border-bottom-right-radius: 2.25rem;
+    overflow: hidden;
+  }
+
+  .card--confirmation {
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  .card--newsletter {
+    max-width: 58rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding: 1.5rem;
+  }
+
+  .card--newsletter .card__content {
+    width: 100%;
+    flex: 1 1 auto;
+    order: 1;
+    padding: 2.06rem 4rem 4rem 2.5rem;
+  }
+
+  .card--newsletter .card__picture {
+    flex: 0 0 auto;
+    order: 2;
+    width: 25rem;
+    border-radius: 0;
+  }
+}

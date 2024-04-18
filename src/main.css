@@ -1,0 +1,16 @@
+@import url("./styles/reset.css");
+
+@import url("./styles/page.css");
+@import url("./styles/card.css");
+@import url("./styles/list.css");
+@import url("./styles/form.css");
+@import url("./styles/button.css");
+@import url("./styles/text.css");
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-vermellion: hsl(4, 100%, 67%);
+  --color-dark-navy: hsl(234, 29%, 20%);
+  --color-pale-navy: hsl(235, 18%, 26%);
+  --color-grey: hsla(243, 28%, 13%, 0.25);
+}

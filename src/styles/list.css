@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.63rem;
+  list-style: none;
+  padding: 0;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.list__item::before {
+  flex: 0 0 auto;
+  content: "";
+  width: 1.3125rem;
+  height: 1.3125rem;
+  background-image: url("icon-success.svg");
+  background-repeat: no-repeat;
+  background-size: 1.3125rem;
+}
